@@ -1,0 +1,584 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* common styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.main {
+    background-image: url(images/IMAGE\ \(5\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 99px 0;
+
+}
+
+/* header*/
+.burger {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.menu li {
+    color: #FFF;
+    font-family: Montserrat;
+   font-size: 0.68rem;  /*  11px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 127.273%;
+    /* 127.273% */
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a {
+    color: #FFF;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.navigation {
+    margin-bottom: 74px;
+}
+
+.menu li::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+
+    transition: all 0.5s;
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+
+.story-text {
+    background-color: #FFF;
+    padding: 36px 76px 44px 60px;
+    color: rgb(51, 51, 51);
+    font-family: Lato;
+    font-size: 1.125rem; /*18px*/
+    font-weight: 400;
+    line-height: 138%;
+    /* 25px */
+}
+
+.story-text a {
+    color: rgb(141, 79, 219);
+    font-family: Lato;
+    font-size: 1.065rem; /*17*/
+    font-weight: 400;
+    line-height:176%;
+    transition: all 0.3s;
+}
+
+.img-text {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.more {
+    text-align: center;
+    background: rgb(241, 241, 241);
+    padding-top: 49px;
+    padding-bottom: 67px;
+}
+
+.more h3 {
+    color: rgb(51, 51, 51);
+    font-family: Montserrat;
+    font-size: 1.875rem; /*30*/
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 0.7em; /*21px*/
+
+
+}
+
+.more a {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 0.625rem; /*10*/
+    font-weight: 400;
+    line-height: 300%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background: rgb(141, 79, 219);
+    padding: 8px 25px 7px 25px;
+    transition: all 0.3s;
+}
+
+.story-text a:hover {
+    color: rgb(115, 0, 255);
+
+}
+
+.more a:hover {
+    background-color: rgb(115, 0, 255);
+}
+
+.story-img {
+    position: relative;
+
+
+}
+
+.img-text h4 {
+    color: #FFF;
+    font-size: 1.75rem; /*28*/
+    line-height: 1.25;
+    max-width: 470px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.name {
+    color: #FFF;
+    font-size: 1.125rem; /* 18*/
+    line-height: 105.556%;
+    margin-bottom: 2px;
+}
+
+.date {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 0.8125rem; /*13*/
+    line-height: 146.154%;
+}
+
+.logo img {
+    margin: 0 auto;
+}
+
+.footer {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    text-align: center;
+    background-color: black;
+    color: rgb(139, 139, 139);
+}
+
+
+
+.middle {
+    background-color: white;
+    padding: 90px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.middle .stories {
+    display: flex;
+    margin-bottom: 3.75em;
+    gap: 1.25rem;
+}
+
+.featured-story {
+    width: calc(100% / 3 - 40px / 3);
+}
+
+.featured-story img {
+    width: 100%;
+}
+
+.featured-story .ava {
+    width: 35px;
+    height: 35px;
+
+}
+
+
+
+.featured-story .user img {
+    width: 35px;
+    height: 35px;
+}
+
+.featured-story .user {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    margin: 0;
+}
+
+
+
+
+
+.img-and-text {
+    position: relative;
+}
+
+.desc {
+    padding: 23px 0;
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 1.125rem; /*18*/
+    font-weight: 400;
+    line-height: 155%;
+
+}
+
+.featured {
+    color: rgb(51, 51, 51);
+    font-family: Montserrat;
+    font-size: 2.5rem; /*40*/
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 0.625em;
+}
+
+.favorites {
+    color: rgb(169, 175, 179);
+    font-family: Lato;
+    font-size: 1.4375rem; /*23*/
+    font-weight: 400;
+    line-height: 143%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 2.17em;
+    max-width: 333px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.more-stories-div {
+    text-align: center;
+}
+
+.more-stories {
+    color: rgb(51, 51, 51);
+    font-family: Lato;
+    font-size: 0.9375rem; /*15*/
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.more-stories-div a {
+    color: rgb(141, 79, 219);
+    font-family: Lato;
+    font-size: 0.9375rem; /*15*/
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.navigation.open {
+    transform: translateX(0);
+}
+
+body.hidden {
+    overflow: hidden;
+}
+
+@media (max-width:768px) {
+    .featured-story {
+        width: 100%;
+    }
+
+    .middle .stories {
+        display: block;
+    }
+
+}
+
+@media (max-width:685px) {
+    .burger {
+        display: block;
+        font-size: 1.5625rem; /* 25*/
+        color: #FFF;
+    }
+
+    .navigation {
+        height: 100vh;
+
+        position: absolute;
+        right: 0;
+        margin: 0;
+        top: 130%;
+        width: 100%;
+        z-index: 100;
+        transform: translateX(120%);
+        transition: all 0.5s;
+        background: rgba(255, 255, 255, 0.4);
+
+        backdrop-filter: blur(2px);
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .header {
+        margin-bottom: 3.125rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .main {
+        overflow-x: hidden;
+        padding: 40px 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding: 25px;
+        align-items: center;
+
+    }
+
+    .menu a {
+        color: #222;
+        font-weight: 700;
+    }
+
+    .img-text {
+        padding: 30px;
+    }
+
+    .img-text h4 {
+        font-size: 1.4375rem; /*23*/
+    }
+
+    .story-text {
+        padding: 30px;
+        font-size: 1rem; /*16*/
+    }
+
+    .story-text a {
+        font-size: 0.9375rem; /*15*/
+    }
+
+    .more h3 {
+        font-size: 1.625rem; /*26*/
+    }
+
+    .more a {
+        font-size: 0.5rem; /*8*/
+        padding: 5px 20px;
+    }
+
+    .featured {
+        font-size: 2.1875rem; /*35*/
+    }
+
+    .favorites {
+        font-size: 1.1875rem; /*19*/
+    }
+
+    .desc {
+        font-size: 1rem; /*16*/
+    }
+
+    .footer {
+        font-size: 0.875rem; /*14*/
+    }
+
+
+
+}
+
+@media (max-width:685px) {
+    .story-img {
+        height: 215px;
+
+    }
+
+    .story-img>img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+
+    }
+
+}
